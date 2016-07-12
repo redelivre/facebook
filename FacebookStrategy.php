@@ -87,6 +87,7 @@ class FacebookStrategy extends OpauthStrategy{
 				if (!empty($me->location)) $this->auth['info']['location'] = $me->location->name;
 				if (!empty($me->link)) $this->auth['info']['urls']['facebook'] = $me->link;
 				if (!empty($me->website)) $this->auth['info']['urls']['website'] = $me->website;
+				if (!empty($me->id)) $this->auth['info']['image'] = 'https://graph.facebook.com/'.$me->id.'/picture?type=large';
 				
 				/**
 				 * Missing optional info values
